@@ -1,0 +1,344 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+}
+
+section {
+    /* margin: 0 25%; */
+    height: 100vh;
+    width: 100vw;
+    /* background-color: red; */
+    overflow: hidden;
+    position: absolute;
+}
+
+#main {
+    width: 800px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    margin-left: -400px;
+    left: 50%;
+    /* border-left: solid 5px white;
+    border-right: solid 5px white; */
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+#screen1 {
+    width: 800px;
+    height: 100%;
+    background-color: #f6f6f6;
+    position: absolute;
+    margin-left: -400px;
+    padding: 5px;
+    left: 50%;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+#screen2 {
+    width: 800px;
+    height: 100%;
+    background-color: #f6f6f6;
+    position: absolute;
+    margin-left: 400px;
+    padding: 5px;
+    left: 50%;
+    transition: 0.5s;
+    z-index: 1;
+
+
+}
+
+#buttonToMusicPlayer {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+#buttonToMusicPlayer i {
+    font-size: 30px;
+}
+
+#buttonToMenu {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 20px;
+    top: 20px
+}
+
+#buttonToMenu i {
+    font-size: 30px;
+}
+
+.title {
+    font-size: 50px;
+    padding: 10px;
+}
+
+.control-bar {
+    padding: 10px
+}
+
+.sort-text {
+    margin-right: 5px;
+}
+
+.track-block {
+    /* height: 200px; */
+    width: 100%;
+    /* background-color: hotpink; */
+}
+
+.track-image {
+    height: 170px;
+    width: 100%;
+    /* background-color: indigo; */
+    overflow: hidden;
+    position: relative;
+
+}
+
+.track-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* .track-image img:hover {
+    webkit-filter: blur(4px); 
+    filter: blur(4px);
+    
+} */
+
+.track-image .play-btn-on-thumb {
+    position: absolute;
+    color: white;
+    left: 50%;
+    margin-left: -25px;
+    top:50%;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 2px 2px #343a40;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.track-image .play-btn-on-thumb i {
+    /* display: none; */
+}
+
+.track-title {
+    padding: 5px 10px 0 10px;
+    color: #343a40;
+}
+
+.track-title:hover {
+    cursor: pointer;
+    color: crimson;
+}
+
+.track-artist {
+    padding: 0 10px 5px 10px;
+    font-size: 13px;
+}
+
+.music-row {
+    padding: 10px 0;
+}
+
+.pagination-container {
+    width: 300px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -150px;
+}
+
+#pagination .active {
+    color: red;
+}
+
+.track-image-2 {
+    padding-top: 50px ;
+}
+
+.track-image-block {
+    height: 200px;
+    width: 200px;
+}
+
+
+.track-image-block img {
+    height: 100%;
+    width: 100%;
+    border: solid 1px #212529;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.track-title-2 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-transform: capitalize;
+}
+
+.track-artist-2 {
+    font-size: 15px;
+    color: #767676;
+}
+
+.control-btn-group {
+    margin: auto;
+    width: 200px;
+    /* background-color: teal; */
+    font-size: 20px;
+    padding : 20px
+}
+
+.music-player {
+    width: 500px;
+    /* background-color: tomato; */
+    margin: auto;
+}
+
+.player {
+    /* margin: auto; */
+    width: 400px;
+    height: 12px;
+    /* background-color: teal; */
+    position: relative;
+}
+
+#durationOfTrack {
+    width: 100%;
+    background: linear-gradient(to right, #bcbcbc 50%, #bcbcbc 25%) ;
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 0;
+    top: 6px;
+}
+
+
+
+.current {
+    height: 12px;
+    width: 12px;
+    background-color: #212529;
+    position: absolute;
+    top : 0px;
+    margin-left: -6px ;
+    /* left : 10px; */
+}
+
+.volume-container {
+    padding : 20px 0 0;
+}
+
+.volume {
+    /* background-color: crimson; */
+    font-size: 15px;
+    color: #212529;
+    width: 18px;
+    position: relative;
+    transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.volume:hover {
+    width: 200px;
+}
+
+#volControl {
+    margin-left: 20px;
+    width: 140px;
+    height: 12px;
+    position: relative;
+}
+
+#fullVol {
+    width: 100%;
+    background: linear-gradient(to right, #bcbcbc 50%, #bcbcbc 25%) ;
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 0;
+    top: 5px;
+}
+
+#currentVol {
+    height: 12px;
+    width: 12px;
+    background-color: #212529;
+    position: absolute;
+    top : 0px;
+    margin-left: -6px ;
+}
+
+
+
+.current-time {
+    font-size: 12px;
+    color: #212529;
+}
+
+.duration-time {
+    font-size: 12px;
+    color: #212529;
+}
+
+
+
+/* css spin trackimage  */
+.spin {
+    animation: infinite-spinning 5s infinite linear;
+}
+
+.pause-spin {
+    animation-play-state: paused;
+}
+  
+@keyframes infinite-spinning {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+/* ---------------------------- */
+
+.relative-title {
+    padding-left: 20px;
+    margin-top: 60px;
+    font-size: 22px;
+}
+.relative-tracks {
+    margin:0 10px;
+}
+
+#test {
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+}

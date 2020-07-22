@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div id="main">
+            <div id="screen1" class="">
+                <div id="buttonToMusicPlayer">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </div>
+                <div class="title d-flex justify-content-center text-dark">Music</div>
+                <div class="control-bar d-flex justify-content-between">
+                    <div class="sort d-flex align-items-center">
+                        <div class="dropdown d-flex align-items-center">
+                            <div class="sort-text d-flex align-items-center text-dark">Sort by</div>
+                            <button class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Default
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" id="notSort">Default</a>
+                                <a class="dropdown-item" id="sortByTitleAsc">Title A-Z</a>
+                                <a class="dropdown-item" id="sortByTitleDesc">Title Z-A</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <form class="form-inline" id="searchForm">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                                id="seachInput">
+                        </form>
+
+                    </div>
+                </div>
+                <div class="container" id="musicList">
+                    <!-- render by JS  -->
+                </div>
+                <div class="pagination-container d-flex justify-content-center">
+                    <ul class="pagination" id="pagination">
+                        <!-- render by JS -->
+                    </ul>
+                </div>
+            </div>
+            <div id="screen2" class="">
+                <div id="buttonToMenu">
+                    <i class="fas fa-arrow-circle-left"></i>
+                </div>
+                <div class="track-image-2 d-flex justify-content-center" id="trackImageToPlay">
+                    <div class="track-image-block">
+                        <img id="trackImg" class="" src="../image/notfound.jpg" alt="">
+                    </div>
+                </div>
+                <div class="track-title-2 text-center" id="trackTitleToPlay">None</div>
+                <div class="track-artist-2 text-center" id="trackArtistToPlay">None</div>
+                <!-- <div class="control-btn-group-section"> -->
+                <div class="control-btn-group d-flex justify-content-around">
+                    <i class="fas fa-backward" id="prevBtn"></i>
+                    <i class="far fa-play-circle" id="playBtn"></i>
+                    <i class="fas fa-forward" id="nextBtn"></i>
+                </div>
+                <!-- </div> -->
+                <div class="music-player d-flex justify-content-between align-items-center">
+                    <div class="current-time" id="currentTime">00:00</div>
+                    <div class="player" id="player">
+                        <audio src="" id="audio"></audio>
+                        <div class="duration" id="durationOfTrack"></div>
+                        <div class="current" id="currentDot"></div>
+                    </div>
+                    <div class="duration-time" id="durationTime">00:00</div>
+
+
+                </div>
+                <div class="volume-container d-flex justify-content-center">
+                    <div class="volume d-flex align-items-center" id="volumeBlock">
+                        <i class="fas fa-volume-up"></i>
+                        <div class="vol-control" id="volControl">
+                            <div class="full-vol" id="fullVol"></div>
+                            <div class="current-vol" id="currentVol"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative-title">Relative Tracks</div>
+                <div class="relative-tracks">
+                    <div class="row music-row" id="relative-row">
+                        <!-- render by JS  -->
+                    </div>
+                </div>
+                <!-- <div id="test"></div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="music-player.js"></script>
+</body>
+
+</html>
