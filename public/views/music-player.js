@@ -68,6 +68,12 @@ function onTimeUpdateAudio() {
         document.querySelector('#currentDot').style.left = currentPosition.toString() + 'px'
         updatePlayer()
         updateVolume()
+        let volIcon = document.getElementById('volIcon')
+        if ( audio.volume == 0 ) {
+            volIcon.className = "fas fa-volume-mute"
+        } else {
+            volIcon.className = "fas fa-volume-up"
+        }
     }) 
 }
 
