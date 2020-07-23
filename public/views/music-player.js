@@ -95,25 +95,30 @@ function updatePlayer() {
 }
 
 function assignTrack(id) {
+    let audio = document.getElementById('audio')
+    let new_audio = audio.cloneNode(true);
+    audio.parentNode.replaceChild(new_audio, audio);
+    audio = document.getElementById('audio')
+    onTimeUpdateAudio()
     fetchOneTrack(genGetOneTrackAPI(id))
     toScreen2()
 }
 
 function nextTrack(nextTrackId) {
     // let nextTrackId = document.getElementsByClassName("track-block")[8].id;
-    let audio = document.getElementById('audio')
-    let new_audio = audio.cloneNode(true);
-    audio.parentNode.replaceChild(new_audio, audio);
-    audio = document.getElementById('audio')
+    // let audio = document.getElementById('audio')
+    // let new_audio = audio.cloneNode(true);
+    // audio.parentNode.replaceChild(new_audio, audio);
+    // audio = document.getElementById('audio')
     onTimeUpdateAudio()
     assignTrack(nextTrackId)
 }
 
 function prevTrack(prevTrackId) {
-    let audio = document.getElementById('audio')
-    let new_audio = audio.cloneNode(true);
-    audio.parentNode.replaceChild(new_audio, audio);
-    audio = document.getElementById('audio')
+    // let audio = document.getElementById('audio')
+    // let new_audio = audio.cloneNode(true);
+    // audio.parentNode.replaceChild(new_audio, audio);
+    // audio = document.getElementById('audio')
     onTimeUpdateAudio()
     assignTrack(prevTrackId)
 }
