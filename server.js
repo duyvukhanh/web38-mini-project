@@ -6,7 +6,7 @@ const path = require('path')
 const staticFolderPath = path.join(__dirname, 'public')
 
 const app = express()
-const port = 9000
+const port = process.env.PORT || 8080
 
 app.use(bodyParser.json())
 
