@@ -149,10 +149,10 @@ function genGetOneTrackAPI(id) {
     let status = JSON.parse(localStorage.getItem('status'))
     if ( status ) {
         if ( status.lastTrack ) {
-            return `http://localhost:9000/api/music/${id}?prev=${status.lastTrack._id}`
+            return `https://music-player-demoz.herokuapp.com/api/music/${id}?prev=${status.lastTrack._id}`
         }
     } 
-    return `http://localhost:9000/api/music/${id}`
+    return `https://music-player-demoz.herokuapp.com/api/music/${id}`
 }
 
 function handleOneResult(result) {

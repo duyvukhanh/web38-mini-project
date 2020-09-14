@@ -2,7 +2,7 @@ window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const pageIndex = Number(urlParams.get('pageIndex')) || 1
     moveScreen()
-    let url = `http://localhost:9000/api/music?pageIndex=${pageIndex}`
+    let url = `https://music-player-demoz.herokuapp.com/api/music?pageIndex=${pageIndex}`
     fetchMusicList(url)
     assignFirstTime()
     onTimeUpdateAudio()
@@ -319,6 +319,6 @@ function genAPI(pageIndex, sortBy, sort, search) {
     let query = [pageIndexQuery, sortByQuery, sortQuery, searchQuery]
     let queryStr = query.filter(Boolean).join('&');
 
-    return 'http://localhost:9000/api/music?' + queryStr
+    return 'https://music-player-demoz.herokuapp.com/api/music?' + queryStr
 }
 
